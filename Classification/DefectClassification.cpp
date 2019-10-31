@@ -47,6 +47,8 @@
 #include "../Segmentation/SegmentationHelper.h"
 #include "../Segmentation/DefectBranchSegmentation.h"
 
+#include "../Quantification/DefectQuantification.h"
+
 #include "../Feature/FeatureExtractionXyz.h"
 #include "../Feature/PredictRF.h"
 

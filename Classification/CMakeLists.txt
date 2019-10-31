@@ -59,12 +59,13 @@ ADD_EXECUTABLE(classifyRF Classify ../Common/IOHelper ../Feature/PredictRF )
 TARGET_LINK_LIBRARIES(classifyRF ${CMAKE_THREAD_LIBS_INIT}  ${OpenCV_LIBS}  ${DGTAL_LIBRARIES}  ${DGtalToolsLibDependencies} )
 
 
-ADD_EXECUTABLE(defCla DefectClassification DefectQuantification
+ADD_EXECUTABLE(defCla DefectClassification 
+    ../Quantification/DefectQuantification
     ../Common/IOHelper ../Centerline/SimpleNormalAccumulator 
     ../Common/CylindricalCoordinateSystem ../Common/Statistic 
     ../Centerline/Centerline ../Centerline/CenterlineMultiCore
     ../Segmentation/DefectBranchSegmentation ../Segmentation/SegmentationAbstract ../Segmentation/DefectSegmentation 
     ../Feature/FeatureExtractionXyz ../Feature/PredictRF ../Feature/MomentCylindrical)
-TARGET_LINK_LIBRARIES(trunkQuan ${DGTAL_LIBRARIES}  ${DGtalToolsLibDependencies} ${PCLLib} ${GSL_LIBRARIES}
+TARGET_LINK_LIBRARIES(defCla ${DGTAL_LIBRARIES}  ${DGtalToolsLibDependencies} ${PCLLib} ${GSL_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}  ${OpenCV_LIBS} )
 
